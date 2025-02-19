@@ -1,8 +1,17 @@
-const overlay = document.querySelector('.overlay');
+document.addEventListener("mousemove", updateSpotlight);
+document.addEventListener("touchmove", updateSpotlight); 
 
-document.addEventListener('mousemove', e => {
-  const x = e.clientX;
-  const y = e.clientY;
-  overlay.style.mask = `radial-gradient(circle 50px at ${x}px ${y}px, rgba(0,0,0,0) 49px, rgba(0,0,0,1) 50px)`;
-  overlay.style.webkitMask = `radial-gradient(circle 50px at ${x}px ${y}px, rgba(0,0,0,0) 49px, rgba(0,0,0,1) 50px)`;
-});
+function updateSpotlight(event) {
+    let x, y;
+
+    if (event.touches) {
+        x = event.touches[0].clientX;
+        y = event.touches[0].clientY;
+    } else {
+        x = event.clientX;
+        y = event.clientY;
+    }
+
+    document.documentElement.style.setProperty('--cursorX', x + 'px');
+    document.documentElement.style.setProperty('--cursorY', y + 'px');
+}
