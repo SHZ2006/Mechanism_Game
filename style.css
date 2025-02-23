@@ -16,6 +16,6 @@ html, body {
   height: 100%;
   background: url('images/mechanism1.png') no-repeat center center/cover;
   
-  mask-image: radial-gradient(circle 200px at var(--cursorX, 80%) var(--cursorY, 80%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  mask-image: radial-gradient(circle 200px at var(--cursorX, 50%) var(--cursorY, 50%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   -webkit-mask-image: radial-gradient(circle 200px at var(--cursorX, 80%) var(--cursorY, 80%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
