@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechanism Design</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Axios for HTTP requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
-    <div id="overlay"></div> 
+    <div id="overlay"></div> <!-- Spotlight overlay -->
 
-    <script src="script.js"></script>
+    <!-- Answer Button -->
+    <button id="answerButton">Answer</button>
+
+    <!-- Chat Box -->
+    <div id="chatBox">
+        <textarea id="chatInput" placeholder="Type your answer..."></textarea>
+        <button id="sendButton">Send</button>
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>

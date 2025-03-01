@@ -1,3 +1,4 @@
+/* Reset page */
 html, body {
   margin: 0;
   padding: 0;
@@ -7,17 +8,86 @@ html, body {
   background: black;
 }
 
-
+/* Adjusted image to fit screen */
 #overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('images/mechanism1.png') no-repeat center center/cover;
+  background: url('images/mechanism.jpg') no-repeat center center;
+  background-size: contain; /* Ensures the whole image fits */
+  mask-image: radial-gradient(circle var(--spotlightSize, 80px) at var(--cursorX, 50%) var(--cursorY, 50%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-image: radial-gradient(circle var(--spotlightSize, 80px) at var(--cursorX, 50%) var(--cursorY, 50%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
 
-  #Desktop
-  mask-image: radial-gradient(circle 200px at var(--cursorX, 70%) var(--cursorY, 70%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  # mobile
-  -webkit-mask-image: radial-gradient(circle 100px at var(--cursorX, 50%) var(--cursorY, 50%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+/* Answer Button */
+#answerButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#answerButton:hover {
+  background-color: #ff9900;
+}
+
+/* Chat Box */
+#chatBox {
+  position: fixed;
+  bottom: 70px; /* Above the Answer button */
+  right: 20px;
+  width: 250px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(10px);
+  border: 2px solid #ccc; /* Symmetric border */
+  box-sizing: border-box; /* Ensures padding is inside */
+}
+
+/* When chat box is open */
+#chatBox.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Chat input */
+#chatBox textarea {
+  width: calc(100% - 10px); /* Keeps padding inside */
+  height: 60px;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Fixes input overflow */
+}
+
+/* Send Button */
+#sendButton {
+  margin-top: 5px;
+  padding: 6px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%; /* Makes button fit perfectly */
+}
+
+#sendButton:hover {
+  background: #0056b3;
 }
