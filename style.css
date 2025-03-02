@@ -15,7 +15,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('images/mechanism.jpg') no-repeat center center;
+  background: url('images/s2.jpg') no-repeat center center;
   background-size: contain; /* Ensures the whole image fits */
   mask-image: radial-gradient(circle var(--spotlightSize, 80px) at var(--cursorX, 50%) var(--cursorY, 50%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   -webkit-mask-image: radial-gradient(circle var(--spotlightSize, 80px) at var(--cursorX, 50%) var(--cursorY, 50%), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
